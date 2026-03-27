@@ -3,6 +3,7 @@
 [![CI](https://github.com/philiprehberger/dotnet-mime-detect/actions/workflows/ci.yml/badge.svg)](https://github.com/philiprehberger/dotnet-mime-detect/actions/workflows/ci.yml)
 [![NuGet](https://img.shields.io/nuget/v/Philiprehberger.MimeDetect.svg)](https://www.nuget.org/packages/Philiprehberger.MimeDetect)
 [![License](https://img.shields.io/github/license/philiprehberger/dotnet-mime-detect)](LICENSE)
+[![Sponsor](https://img.shields.io/badge/sponsor-GitHub%20Sponsors-ec6cb9)](https://github.com/sponsors/philiprehberger)
 
 Detect MIME types from file signatures (magic bytes) and file extensions — covers 200+ common file types.
 
