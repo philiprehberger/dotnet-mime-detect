@@ -11,7 +11,7 @@
 
     <!-- Package metadata -->
     <PackageId>Philiprehberger.MimeDetect</PackageId>
-    <Version>0.1.1</Version>
+    <Version>0.2.0</Version>
     <Authors>Philip Rehberger</Authors>
     <Description>Detect MIME types from file signatures (magic bytes) and file extensions — covers 200+ common file types.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>

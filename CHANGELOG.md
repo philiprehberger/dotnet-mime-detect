@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.0 (2026-04-05)
+
+- Add convenience type-checking methods: `IsImage`, `IsVideo`, `IsAudio`, `IsArchive`
+- Shortcuts that detect MIME type from a file path and check its category
+
 ## 0.1.1 (2026-03-31)
 
 - Standardize README to 3-badge format with emoji Support section

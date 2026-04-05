@@ -133,6 +133,54 @@ public static class MimeDetect
         return new MimeResult(mime, extNoDot, category);
     }
 
+    /// <summary>
+    /// Determines whether the file at the specified path is an image.
+    /// </summary>
+    /// <param name="path">The path to the file.</param>
+    /// <returns><c>true</c> if the file is detected as an image; otherwise, <c>false</c>.</returns>
+    /// <exception cref="FileNotFoundException">Thrown when the file does not exist.</exception>
+    public static bool IsImage(string path)
+    {
+        var result = DetectFromFile(path);
+        return result?.Category == "image";
+    }
+
+    /// <summary>
+    /// Determines whether the file at the specified path is a video.
+    /// </summary>
+    /// <param name="path">The path to the file.</param>
+    /// <returns><c>true</c> if the file is detected as a video; otherwise, <c>false</c>.</returns>
+    /// <exception cref="FileNotFoundException">Thrown when the file does not exist.</exception>
+    public static bool IsVideo(string path)
+    {
+        var result = DetectFromFile(path);
+        return result?.Category == "video";
+    }
+
+    /// <summary>
+    /// Determines whether the file at the specified path is an audio file.
+    /// </summary>
+    /// <param name="path">The path to the file.</param>
+    /// <returns><c>true</c> if the file is detected as audio; otherwise, <c>false</c>.</returns>
+    /// <exception cref="FileNotFoundException">Thrown when the file does not exist.</exception>
+    public static bool IsAudio(string path)
+    {
+        var result = DetectFromFile(path);
+        return result?.Category == "audio";
+    }
+
+    /// <summary>
+    /// Determines whether the file at the specified path is an archive.
+    /// </summary>
+    /// <param name="path">The path to the file.</param>
+    /// <returns><c>true</c> if the file is detected as an archive; otherwise, <c>false</c>.</returns>
+    /// <exception cref="FileNotFoundException">Thrown when the file does not exist.</exception>
+    public static bool IsArchive(string path)
+    {
+        var result = DetectFromFile(path);
+        return result?.Category == "archive";
+    }
+
     private static string InferCategory(string mimeType)
     {
         var type = mimeType.Split('/')[0];

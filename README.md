@@ -63,6 +63,19 @@ MimeResult? result = MimeDetect.DetectFromFile("song.mp3");
 // result.Category  => "audio"
 ```
 
+### Type-Checking Shortcuts
+
+```csharp
+using Philiprehberger.MimeDetect;
+
+bool image = MimeDetect.IsImage("photo.png");    // true
+bool video = MimeDetect.IsVideo("clip.mp4");      // true
+bool audio = MimeDetect.IsAudio("song.mp3");      // true
+bool archive = MimeDetect.IsArchive("backup.zip"); // true
+
+MimeDetect.IsImage("readme.txt"); // false
+```
+
 ## API
 
 ### `MimeDetect`
@@ -74,6 +87,10 @@ MimeResult? result = MimeDetect.DetectFromFile("song.mp3");
 | `FromFile(string path)` | Detect MIME type from a file (magic bytes with extension fallback) |
 | `DetectFromBytes(ReadOnlySpan<byte> data)` | Detect MIME type from raw bytes, returns full `MimeResult` |
 | `DetectFromFile(string path)` | Detect MIME type from a file, returns full `MimeResult` |
+| `IsImage(string path)` | Check if a file is an image |
+| `IsVideo(string path)` | Check if a file is a video |
+| `IsAudio(string path)` | Check if a file is an audio file |
+| `IsArchive(string path)` | Check if a file is an archive |
 
 ### `MimeResult`
 
